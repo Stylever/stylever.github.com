@@ -1,0 +1,24 @@
+/* header */
+.header .header-banner {
+	padding: 5rem 6rem;
+	color: #fff;
+	text-align: center;
+	background-color: #159957;
+	background-image: linear-gradient(120deg, #155799, #159957);
+}
+.header .header-banner h1 {
+	margin: 0.67em 0;
+	font-size: 6.25rem;
+}
+
+/* main-content */
+.main-content {
+	margin-top: 20px;
+}
+
+/* footer */
+.footer {
+	padding: 1rem 0;
+	font-size: 1.45rem;
+	text-align: center;
+}
