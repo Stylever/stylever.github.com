@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stylever</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Style Blog">
+		<meta name="keywords" content="Style Stylever">
+		<meta name="description" content="Style Blog Front End">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../css/stylever.css" media="screen">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <section id="page" class="page">
+
+            </section>
+        </div>
+        <footer id="footer" class="footer"></footer>
+        
+        <script type="text/javascript" src="../js/libs/require.min.js"></script>
+        <script type="text/javascript">
+            var tpl = 'zh'; // 模版路径 默认为中文模板
+            if (navigator.userAgent.indexOf("MSIE") == -1) { // not ie 
+                var random = Math.random() * 100;
+                if (random >= 30 && random <= 80) {
+                    tpl = 'en';
+                }
+            } 
+
+            require.config({
+                baseUrl: '../js',
+                paths: {
+                    'jquery': 'libs/jquery.min',
+                    'bootstrap': 'libs/bootstrap.min',
+                    'template': '../pages/templates/' + tpl + '/build/template'
+                },
+                shim: {
+                    'jquery': {
+                        exports: '$'
+                    },
+                    'bootstrap': {
+                        deps: ['jquery']
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../js/blog.js"></script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?f3a2bad1c144d84de7f408c7deeaf500";
+              document.body.appendChild(hm);
+            })();
+        </script>  
+    </body>
+</html>
