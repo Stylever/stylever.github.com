@@ -17,7 +17,7 @@
             </header>
 
             <section id="page" class="page">
-                <img src="images/index.jpg" width="100%" />
+                
             </section>
 
         </div>
@@ -25,23 +25,14 @@
             
         </footer>
         
-        <script type="text/javascript" src="js/libs/require.min.js"></script>
+        <script type="text/javascript" src="../js/libs/require.min.js"></script>
         <script type="text/javascript">
-            var tpl = 'zh'; // 模版路径 默认为中文模板
-            if (navigator.userAgent.indexOf("MSIE") == -1) { // not ie 
-                var random = Math.random() * 100;
-                console.log("random;" + random);
-                if (random >= 30 && random <= 80) {
-                    tpl = 'en';
-                }
-            } 
-
             require.config({
-                baseUrl: 'js',
+                baseUrl: '../js',
                 paths: {
                     'jquery': 'libs/jquery.min',
                     'bootstrap': 'libs/bootstrap.min',
-                    'template': '../pages/templates/' + tpl + '/build/template'
+                    'template': '../pages/templates/build/template'
                 },
                 shim: {
                     'jquery': {
@@ -53,7 +44,7 @@
                 }
             });
         </script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="../js/projects.js"></script>
         <script>
             var _hmt = _hmt || [];
             (function() {

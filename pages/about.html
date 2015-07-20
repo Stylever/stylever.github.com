@@ -7,25 +7,20 @@
         <meta name="title" content="Style Blog">
 		<meta name="keywords" content="Style Stylever">
 		<meta name="description" content="Style Blog Front End">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="css/stylever.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../css/stylever.css" media="screen">
     </head>
     <body>
         <div class="wrapper">
-            <header id="header" class="header">
-                
-            </header>
+            <header id="header" class="header"></header>
 
             <section id="page" class="page">
-                <img src="images/index.jpg" width="100%" />
-            </section>
 
+            </section>
         </div>
-        <footer id="footer" class="footer">
-            
-        </footer>
+        <footer id="footer" class="footer"></footer>
         
-        <script type="text/javascript" src="js/libs/require.min.js"></script>
+        <script type="text/javascript" src="../js/libs/require.min.js"></script>
         <script type="text/javascript">
             var tpl = 'zh'; // 模版路径 默认为中文模板
             if (navigator.userAgent.indexOf("MSIE") == -1) { // not ie 
@@ -35,9 +30,9 @@
                     tpl = 'en';
                 }
             } 
-
+            
             require.config({
-                baseUrl: 'js',
+                baseUrl: '../js',
                 paths: {
                     'jquery': 'libs/jquery.min',
                     'bootstrap': 'libs/bootstrap.min',
@@ -53,7 +48,7 @@
                 }
             });
         </script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="../js/about.js"></script>
         <script>
             var _hmt = _hmt || [];
             (function() {
@@ -61,6 +56,6 @@
               hm.src = "//hm.baidu.com/hm.js?f3a2bad1c144d84de7f408c7deeaf500";
               document.body.appendChild(hm);
             })();
-        </script>    
+        </script>  
     </body>
 </html>
