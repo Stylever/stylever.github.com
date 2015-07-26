@@ -136,7 +136,7 @@ html,body{
 	   -moz-perspective: 2000px;
 	   	    perspective: 2000px;
 }
-@media screen and (max-width: 1136px) {
+@media screen and (max-width: 768px) {
 	.carousel-3d {
 		margin: -100px 0 0 -150px;
 		width: 300px;
@@ -181,7 +181,9 @@ html,body{
 }
 .popup .prev {
 	left: 20px;
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+			transform: rotateY(180deg);
 }
 .popup .next {
 	right: 20px;

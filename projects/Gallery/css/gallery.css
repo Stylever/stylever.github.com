@@ -54,6 +54,13 @@
 	   -moz-perspective: 2000px;
 	   	    perspective: 2000px;
 }
+@media screen and (max-width: 768px) {
+	.carousel-3d {
+		margin: -100px 0 0 -150px;
+		width: 300px;
+		height: 200px;
+	}
+}
 .carousel-3d .spin {
 	position: absolute;
 	width: 100%;
