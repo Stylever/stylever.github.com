@@ -1,1 +1,10 @@
 @charset "utf-8";
+
+.blog-content {
+	margin: 20px auto;
+	width: 90%;
+	font-size: 18px;
+}
+.blog-content p {
+	text-indent: 2em;
+}
