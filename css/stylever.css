@@ -118,6 +118,24 @@ html,body{
 	color: #337ab7;
 	background: rgba(222,250,254,0.9);
 }
+
+/* blog */
+.blog-list li {
+	margin: 20px 0;
+	width: 90%;
+	list-style: none;
+}
+.blog-list li a {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffffff;
+	background: rgba(141,231,255,0.9); 
+	line-height: 100px;
+	text-align: center;
+	border-radius: 5px;
+}
+
 /* gallery */
 .gallery {
 	margin: 20px auto;
