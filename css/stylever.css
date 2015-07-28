@@ -230,11 +230,20 @@ html,body{
 }
 .popup .thank {
 	position: absolute;
-	left: 40%;
-	bottom: 20px;
+	left: 50%;
+	margin-left: -160px;
+	width: 320px;
+	/*height: 30px;*/
+	/*left: 40%;*/
+	bottom: 10%;
 	font-size: 16px;
 	color: #ffffff;
 }
+/*@media screen and (max-width: 768px) {
+	.popup .thank {
+		left: 8%;
+	}
+}*/
 .popup .thank .share i {
 	margin: 0 5px 0 10px;
 	font-size: 18px;
