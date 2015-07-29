@@ -12,7 +12,7 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 
 
 	var thanksArr = [
-			{content: "感谢_DeAth_TrAp提供的图片素材", url: "http://weibo.com/u/1976341311", social: "Weibo"},
+			{avatar: "../images/ydy.jpg", nickname: "_DeAth_TrAp", url: "http://weibo.com/u/1976341311", social: "Weibo"},
 			{},
 			{}
 		];
@@ -36,10 +36,12 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 			}
 			$(".spin").html(str);
 
-			if ("content" in thanksArr[index]) {
-				thankStr += thanksArr[index].content
+			if ("avatar" in thanksArr[index]) {
+				thankStr += "Photos by: "
 						 +      '<a class="share" href="' + thanksArr[index].url + '" target="_blank">'
-						 +		    '<i class="iconfont">&#xe603;</i>' + thanksArr[index].social
+						 +			'<img src="' + thanksArr[index].avatar +'" />'
+						 +			'<span>' + 	thanksArr[index].nickname	    
+						 + 			'<i class="iconfont">&#xe603;</i>' + thanksArr[index].social
 						 +		'</a>';	 
 			}
 			$(".thank").html(thankStr);
@@ -72,7 +74,6 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 				var arrIndex = $(this).attr("arr-index"), // eg: imgsArr index 1-2 
 					arr = arrIndex.split("-"); // [1, 2]
 
-				console.log("arr:" + arr)
 				gallery.num = -arr[1];
 				gallery.appendSpinImg(arr[0]);
 				gallery.spinImg(arr[0])
