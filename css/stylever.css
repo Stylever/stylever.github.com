@@ -230,8 +230,8 @@ html,body{
 .popup .next {
 	position: absolute;
 	top: 50%;
-	margin-top: -40px;
-	font-size: 80px;
+	margin-top: -30px;
+	font-size: 60px;
 	color: #ffffff;
 	cursor: pointer;
 }
