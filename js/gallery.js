@@ -21,6 +21,12 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 		num: 0, // click num
 		rotateYDeg: 0, // rotateY
 		transZDistance: 0, // translateZ
+		initMusic: function () {
+			var audio = document.getElementById("music");
+			audio.src = "../medias/moment.mp3";
+			audio.loop = true; // 歌曲循环
+			audio.play(); // 歌曲播放
+		},
 		lazyImg: function () { 
 			$('.lazy').lazyload({ 
 			    effect:'fadeIn' 
@@ -83,6 +89,22 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 				$(".popup").show();
 			});
 
+			// music
+			$(".icon-music").on("click", function () {
+				var className = $(this).attr("class"),
+					audio = document.getElementById("music");
+				
+				if (className.indexOf("pause") > -1) { // start
+					audio.play();
+					$(this).removeClass("pause");
+					$(this).html("&#xe605;");
+				} else { // pause
+					audio.pause();
+					$(this).addClass("pause");
+					$(this).html("&#xe606;");
+				}
+			});
+
 			// carousel 3D
 			$(".popup").on("click", ".prev", function () {
 				gallery.num++;
@@ -134,6 +156,8 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 
 			gallery.lazyImg();
 			gallery.selectAction();
+
+			gallery.initMusic();
 		}
 	};
 
