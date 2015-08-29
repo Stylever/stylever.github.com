@@ -151,6 +151,25 @@ html,body{
 	color: #337ab7;
 	cursor: pointer;
 }
+
+/* photo-wall */
+.photo-wall .theme {
+	margin: 10px 0;
+}
+.photo-wall .author {
+	margin: 10px 0;
+	font-size: 12px;
+	color: #f5821f;
+}
+.origin-img {
+	position: relative;
+	margin: 20px auto;
+	width: 95%;
+	overflow: hidden;
+}
+.origin-img img {
+	width: 100%;
+}
 .popup {
 	display: none;
 	position: absolute;
@@ -160,10 +179,10 @@ html,body{
 	height: 100%;
 	background: #000000;
 	overflow: hidden;
-	-webkit-transition: -webkit-transform 1s;
+/*	-webkit-transition: -webkit-transform 1s;
 	   -moz-transition: -moz-transform 1s;
 	     -o-transition: -o-transform 1s;
-		  	transition: 1s;
+		  	transition: 1s;*/
 }
 .carousel-3d {
 	position: relative;
