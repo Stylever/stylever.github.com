@@ -340,6 +340,7 @@ html,body{
 	font-size: 40px;
 	color: #ffffff;
 	cursor: pointer;
+	z-index: 999;
 }
 .popup-photo-wall .prev,
 .popup-photo-wall .next {
@@ -385,4 +386,26 @@ html,body{
 .popup-photo-wall .thank a:focus,
 .popup-photo-wall .thank a:hover {
 	color: #59adf7;
+}
+.popup-loading {
+	display: none;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    overflow: hidden;
+	z-index: 99;
+}
+.loading {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin: -64px 0 0 -64px;
+    width: 128px;
+    height: 128px;
+}
+.loading img {
+	width: 100%;
 }

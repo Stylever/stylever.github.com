@@ -46,15 +46,22 @@ require(['template', 'lazyload'], function (template) {
 			$(".popup-photo-wall").on("click", ".next", function () {
 				var arrIndex = $(".origin-img").attr("arr-index"),
 					arr = arrIndex.split("-"),
-					index = $(".origin-img img").attr("index");
+					index = $(".origin-img img").attr("index"),
+					src = "";
+
+				$(".popup-loading").css("height", $(".origin-img").outerHeight(true) + "px").show();
 
 				if (arrIndex && index) {
 					var photoArr = photoWallObj["photos"][arr[0]][arr[1]]["photoArr"];
 
 					if (index != (photoArr.length - 1)) { // not the last photo
-						$(".origin-img img").attr("src", "../images/" + photoArr[parseInt(index) + 1]).attr("index", parseInt(index) + 1);
+						src = "../images/" + photoArr[parseInt(index) + 1];
+
+						photoWall.showCompletePhoto(src, parseInt(index) + 1);
 					} else { // the last photo
-						$(".origin-img img").attr("src", "../images/" + photoArr[0]).attr("index", "0");
+						src = "../images/" + photoArr[0];
+
+						photoWall.showCompletePhoto(src, "0");
 					}
 				}
 			});
@@ -62,19 +69,35 @@ require(['template', 'lazyload'], function (template) {
 			$(".popup-photo-wall").on("click", ".prev", function () {
 				var arrIndex = $(".origin-img").attr("arr-index"),
 					arr = arrIndex.split("-"),
-					index = $(".origin-img img").attr("index");
+					index = $(".origin-img img").attr("index"),
+					src = "";
+
+				$(".popup-loading").css("height", $(".origin-img").outerHeight(true) + "px").show();
 
 				if (arrIndex && index) {
 					var photoArr = photoWallObj["photos"][arr[0]][arr[1]]["photoArr"];
 
 					if (index != "0") { // not the first photo
-						$(".origin-img img").attr("src", "../images/" + photoArr[parseInt(index) - 1]).attr("index", parseInt(index) - 1);
+						src = "../images/" + photoArr[parseInt(index) - 1];
+
+						photoWall.showCompletePhoto(src, parseInt(index) - 1);
 					} else { // the first photo
-						$(".origin-img img").attr("src", "../images/" + photoArr[photoArr.length - 1]).attr("index", photoArr.length - 1);
+						src = "../images/" + photoArr[photoArr.length - 1];
+
+						photoWall.showCompletePhoto(src, photoArr.length - 1);
 					}
-					photoWall.autoHeight();
 				}
 			});
+		},
+		showCompletePhoto: function (path, index) { // show the completed photo
+			var image = new Image();
+
+			image.src = path;
+			
+			if (image.complete) {
+				$(".origin-img img").attr("src", path).attr("index", index);
+				$(".popup-loading").hide();
+			}
 		},
 		appendOriginPhoto: function (arrIndex) { // show origin photo
 			var arr = arrIndex.split("-"),
