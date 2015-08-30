@@ -35,6 +35,7 @@
                 paths: {
                     'jquery': 'libs/jquery.min',
                     'bootstrap': 'libs/bootstrap.min',
+                    'lazyload': 'plugins/jquery.lazyload.min',
                     'template': '../pages/templates/' + tpl + '/build/template'
                 },
                 shim: {
@@ -42,6 +43,9 @@
                         exports: '$'
                     },
                     'bootstrap': {
+                        deps: ['jquery']
+                    },
+                    'lazyload': {
                         deps: ['jquery']
                     }
                 }

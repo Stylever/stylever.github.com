@@ -1,4 +1,4 @@
-require(['template', 'jquery'], function (template) {
+require(['template', 'lazyload'], function (template) {
 	var photoWallObj = {
 		photos: [[{
 			author: "_DeAth_TrAp",
@@ -22,6 +22,11 @@ require(['template', 'jquery'], function (template) {
 	};
 
 	var photoWall = {
+		lazyImg: function () { 
+			$('.lazy').lazyload({ 
+			    effect:'fadeIn' 
+			});
+		},
 		selectAction: function () { // event binding
 			// show big photos
 			$(".row").on("click", ".photo", function () {
@@ -86,6 +91,7 @@ require(['template', 'jquery'], function (template) {
 			// 
 			$("#page").html(template('photo_wall', photoWallObj));
 
+			photoWall.lazyImg();
 			photoWall.selectAction(); // event binding
 		}
 	};
