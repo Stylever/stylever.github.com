@@ -22,6 +22,7 @@ require(['template', 'lazyload'], function (template) {
 	};
 
 	var photoWall = {
+		imageObj: new Image(),
 		lazyImg: function () { 
 			$('.lazy').lazyload({ 
 			    effect:'fadeIn' 
@@ -33,6 +34,7 @@ require(['template', 'lazyload'], function (template) {
 
 				photoWall.appendOriginPhoto($(this).attr("arr-index"));
 
+				$(".popup-loading").show();
 				$(".popup-photo-wall").show();
 				$(".photo-wall").hide();
 			});
@@ -93,19 +95,25 @@ require(['template', 'lazyload'], function (template) {
 		showCompletePhoto: function (path, index) { // show the completed photo
 			var image = new Image();
 
-			image.src = path;
+			photoWall.imageObj.src = path;
 			
-			if (image.complete) {
-				$(".origin-img img").attr("src", path).attr("index", index);
-				$(".popup-loading").hide();
-			}
+			photoWall.timer = setInterval( function () {
+				if (photoWall.imageObj.complete) {
+					$(".origin-img img").attr("src", path).attr("index", index);
+					$(".popup-loading").hide();
+
+					clearInterval(photoWall.timer)
+				}
+			}, 1000);
+
 		},
 		appendOriginPhoto: function (arrIndex) { // show origin photo
 			var arr = arrIndex.split("-"),
-				path = photoWallObj["photos"][arr[0]][arr[1]]["photoArr"][0];
+				src = "../images/" + photoWallObj["photos"][arr[0]][arr[1]]["photoArr"][0];
 
 			$(".origin-img").attr("arr-index", arrIndex);
-			$(".origin-img img").attr("src", "../images/" + path).attr("index", "0");
+
+			photoWall.showCompletePhoto(src, "0");
 		},
 		init: function () { // init
 			// header
