@@ -9,7 +9,7 @@ require(['template', 'lazyload'], function (template) {
 			index: "../images/flower1/index.jpg",
 			link: "http://weibo.com/u/1976341311", 
 			social: "Weibo",
-			photoArr: ["flower1/1.jpg","flower1/2.jpg","flower1/3.jpg","flower1/4.jpg","flower1/5.jpg","flower1/6.jpg","flower1/7.jpg"]
+			photoArr: ["flower1/small.jpg","flower1/1.jpg","flower1/2.jpg","flower1/3.jpg","flower1/4.jpg","flower1/5.jpg","flower1/6.jpg","flower1/7.jpg"]
 		}],
 		[{
 			author: "_DeAth_TrAp",
@@ -18,7 +18,7 @@ require(['template', 'lazyload'], function (template) {
 			index: "../images/flower2/index.jpg",
 			link: "http://weibo.com/u/1976341311", 
 			social: "Weibo",
-			photoArr: ["flower2/1.jpg","flower2/2.jpg","flower2/3.jpg","flower2/4.jpg","flower2/5.jpg"]
+			photoArr: ["flower2/small.jpg","flower2/1.jpg","flower2/2.jpg","flower2/3.jpg","flower2/4.jpg","flower2/5.jpg"]
 		}],
 		[{
 			author: "Style",
@@ -27,7 +27,7 @@ require(['template', 'lazyload'], function (template) {
 			index: "../images/sea/index.jpg",
 			link: "http://weibo.com/u/1839602901", 
 			social: "Weibo",
-			photoArr: ["sea/1.jpg","sea/2.jpg","sea/3.jpg","sea/4.jpg","sea/5.jpg"]
+			photoArr: ["sea/small.jpg","sea/1.jpg","sea/2.jpg","sea/3.jpg","sea/4.jpg","sea/5.jpg"]
 		}]]
 	};
 
