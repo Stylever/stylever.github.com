@@ -18,7 +18,15 @@ require(['template', 'lazyload'], function (template) {
 			social: "Weibo",
 			photoArr: ["flower2/1.jpg","flower2/2.jpg","flower2/3.jpg","flower2/4.jpg","flower2/5.jpg"]
 		}],
-		[]]
+		[{
+			author: "Style",
+			theme: "天沧海",
+			avatar: "",
+			index: "../images/sea/index.jpg",
+			link: "http://weibo.com/u/1839602901", 
+			social: "Weibo",
+			photoArr: ["sea/1.jpg","sea/2.jpg","sea/3.jpg","sea/4.jpg","sea/5.jpg"]
+		}]]
 	};
 
 	var photoWall = {
