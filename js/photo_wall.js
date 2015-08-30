@@ -1,4 +1,6 @@
 require(['template', 'lazyload'], function (template) {
+	// in order to improve the speed of image, the size of the first image should be smaller
+
 	var photoWallObj = {
 		photos: [[{
 			author: "_DeAth_TrAp",
