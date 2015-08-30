@@ -41,6 +41,7 @@ require(['template', 'lazyload'], function (template) {
 			$(".popup-photo-wall").on("click", ".close", function () {
 				$(".photo-wall").show();
 				$(".popup-photo-wall").hide();
+				$(".popup-loading").hide();
 			});
 			// next photo
 			$(".popup-photo-wall").on("click", ".next", function () {
