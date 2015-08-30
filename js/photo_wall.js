@@ -55,6 +55,8 @@ require(['template', 'lazyload'], function (template) {
 				$(".photo-wall").show();
 				$(".popup-photo-wall").hide();
 				$(".popup-loading").hide();
+
+				$(".origin-img img").attr("src", "");
 			});
 			// next photo
 			$(".popup-photo-wall").on("click", ".next", function () {
