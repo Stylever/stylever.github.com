@@ -41,6 +41,7 @@ require(['template', 'lazyload'], function (template) {
 			$(".row").on("click", ".photo", function () {
 
 				photoWall.appendOriginPhoto($(this).attr("arr-index"));
+				photoWall.preloadImage($(this).attr("arr-index"));
 
 				$(".popup-loading").show();
 				$(".popup-photo-wall").show();
@@ -122,6 +123,15 @@ require(['template', 'lazyload'], function (template) {
 			$(".origin-img").attr("arr-index", arrIndex);
 
 			photoWall.showCompletePhoto(src, "0");
+		},
+		preloadImage: function (arrIndex) { // preload the current group of photos
+			var arr = arrIndex.split("-");
+
+			for (var i = 1, len = photoWallObj["photos"][arr[0]][arr[1]]["photoArr"].length; i < len; i++) {
+				var image = new Image();
+				image.src = "../images/" + photoWallObj["photos"][arr[0]][arr[1]]["photoArr"][i];
+			}
+			
 		},
 		init: function () { // init
 			// header
