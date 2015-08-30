@@ -1,13 +1,15 @@
-<section class="photo-wall gallery">
+<section class="photo-wall">
     <div class="container-fluid">
         <div class="row">
             {{each photos as value i}}
             <div class="col-xs-6 col-md-4">
                 {{each value as val j}}
-                <div class="photo" arr-index="{{i}}-{{j}}">
-                    <img class="lazy" data-original="{{val.index}}" src="{{val.index}}" />
+                <div class="model">
+                    <div class="photo" arr-index="{{i}}-{{j}}">
+                        <img class="lazy" data-original="{{val.index}}" src="{{val.index}}" />
+                    </div>
                     <h5 class="theme">{{val.theme}}</h5>
-                    <p class="author">{{val.author}}</p>
+                    <p class="author"><a href="{{val.link}}" target="_blank">{{val.author}}<i class="iconfont">&#xe603;</i></a></p>
                 </div>
                 {{/each}}
             </div>
@@ -16,12 +18,11 @@
     </div>
 </section>
 
-<div class="popup">
+<div class="popup-photo-wall">
     <div class="origin-img">
         <img src="" />
     </div>
     <div class="iconfont close">&#xe601;</div>
     <div class="iconfont prev">&#xe602;</div>
     <div class="iconfont next">&#xe602;</div>
-    <div class="thank"></div>
 </div>

@@ -151,25 +151,6 @@ html,body{
 	color: #337ab7;
 	cursor: pointer;
 }
-
-/* photo-wall */
-.photo-wall .theme {
-	margin: 10px 0;
-}
-.photo-wall .author {
-	margin: 10px 0;
-	font-size: 12px;
-	color: #f5821f;
-}
-.origin-img {
-	position: relative;
-	margin: 20px auto;
-	width: 95%;
-	overflow: hidden;
-}
-.origin-img img {
-	width: 100%;
-}
 .popup {
 	display: none;
 	position: absolute;
@@ -179,10 +160,10 @@ html,body{
 	height: 100%;
 	background: #000000;
 	overflow: hidden;
-/*	-webkit-transition: -webkit-transform 1s;
+	-webkit-transition: -webkit-transform 1s;
 	   -moz-transition: -moz-transform 1s;
 	     -o-transition: -o-transform 1s;
-		  	transition: 1s;*/
+		  	transition: 1s;
 }
 .carousel-3d {
 	position: relative;
@@ -303,4 +284,105 @@ html,body{
 }
 .popup-large .img-large img {
 	width: 100%;
+}
+
+
+/* photo-wall */
+.photo-wall .model {
+	margin-bottom: 10px;
+    background: #e6e6e6;
+    border-radius: 3px;
+    padding: 5px;
+}
+.photo-wall .photo {
+	cursor: pointer;
+}
+.photo-wall .photo img {
+	width: 100%;
+}
+.photo-wall .theme {
+	margin: 10px 0;
+}
+.photo-wall .author {
+	margin: 10px 0;
+	font-size: 12px;
+	color: #f5821f;
+}
+.photo-wall .author i {
+	margin: 0 5px 0 10px;
+    font-size: 18px;
+}
+.origin-img {
+	position: relative;
+	margin: 20px auto;
+	width: 95%;
+	overflow: hidden;
+}
+.origin-img img {
+	width: 100%;
+}
+.popup-photo-wall {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000000;
+	overflow: hidden;
+	-webkit-transition: -webkit-transform 1s;
+	   -moz-transition: -moz-transform 1s;
+	     -o-transition: -o-transform 1s;
+		  	transition: 1s;
+}
+.popup-photo-wall .close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 40px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.popup-photo-wall .prev,
+.popup-photo-wall .next {
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	font-size: 60px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.popup-photo-wall .prev {
+	left: 20px;
+	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+}
+.popup-photo-wall .next {
+	right: 20px;
+}
+.popup-photo-wall .thank {
+	position: absolute;
+	left: 50%;
+	margin-left: -160px;
+	/*width: 320px;*/
+	bottom: 5%;
+	font-size: 16px;
+	color: #ffffff;
+}
+.popup-photo-wall .thank img {
+	margin: 0 10px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.popup-photo-wall .thank .share i {
+	margin: 0 5px 0 10px;
+	font-size: 18px;
+}
+.popup-photo-wall .thank a {
+	color: #3c9aec;
+}
+.popup-photo-wall .thank a:focus,
+.popup-photo-wall .thank a:hover {
+	color: #59adf7;
 }
