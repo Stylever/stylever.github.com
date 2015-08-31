@@ -3,7 +3,7 @@ require(['template', 'lazyload'], function (template) {
 
 	var photoWallObj = {
 		photos: [[{
-			author: "_DeAth_TrAp",
+			author: "丁一小学生",
 			theme: "众里寻你",
 			avatar: "../images/ydy.jpg",
 			index: "../images/flower1/index.jpg",
@@ -12,7 +12,7 @@ require(['template', 'lazyload'], function (template) {
 			photoArr: ["flower1/small.jpg","flower1/1.jpg","flower1/2.jpg","flower1/3.jpg","flower1/4.jpg","flower1/5.jpg","flower1/6.jpg","flower1/7.jpg"]
 		}],
 		[{
-			author: "_DeAth_TrAp",
+			author: "丁一小学生",
 			theme: "洛水之滨，许以百年期限",
 			avatar: "../images/ydy.jpg",
 			index: "../images/flower2/index.jpg",
