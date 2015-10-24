@@ -33,20 +33,20 @@
         
         <script type="text/javascript" src="js/libs/require.min.js"></script>
         <script type="text/javascript">
-            var tpl = 'zh'; // 模版路径 默认为中文模板
-            if (navigator.userAgent.indexOf("MSIE") == -1) { // not ie 
-                var random = Math.random() * 100;
-                if (random >= 30 && random <= 80) {
-                    tpl = 'en';
-                }
-            } 
+            // var tpl = 'zh'; // 模版路径 默认为中文模板
+            // if (navigator.userAgent.indexOf("MSIE") == -1) { // not ie 
+            //     var random = Math.random() * 100;
+            //     if (random >= 30 && random <= 80) {
+            //         tpl = 'en';
+            //     }
+            // } 
 
             require.config({
                 baseUrl: 'js',
                 paths: {
                     'jquery': 'libs/jquery.min',
                     'bootstrap': 'libs/bootstrap.min',
-                    'template': '../pages/templates/' + tpl + '/build/template'
+                    'template': '../pages/templates/build/template'
                 },
                 shim: {
                     'jquery': {

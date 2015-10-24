@@ -1,4 +1,4 @@
-require(['template', 'bootstrap', 'lazyload'], function (template) {
+require(['template', 'modules/browser', 'bootstrap', 'lazyload'], function (template, browser) {
 	
 	var imgsArr = [
 			["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"],
@@ -148,7 +148,7 @@ require(['template', 'bootstrap', 'lazyload'], function (template) {
 		},
 		init: function () {
 			// header
-			$("#header").html(template('header'));
+			$("#header").html(template('header', browser));
 			//footer
 			$("#footer").html(template('footer'));
 			// 

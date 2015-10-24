@@ -1,4 +1,4 @@
-require(['template', 'lazyload'], function (template) {
+require(['template', 'modules/browser', 'lazyload'], function (template, browser) {
 	// in order to improve the speed of image, the size of the first image should be smaller
 
 	var photoWallObj = {
@@ -205,7 +205,7 @@ require(['template', 'lazyload'], function (template) {
 		},
 		init: function () { // init
 			// header
-			$("#header").html(template('header'));
+			$("#header").html(template('header', browser));
 			//footer
 			$("#footer").html(template('footer'));
 			// 

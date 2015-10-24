@@ -34,7 +34,7 @@ html,body{
 
 /* header */
 .header {
-	text-align: center;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .header .navbar {
 	margin: 0;
@@ -44,6 +44,9 @@ html,body{
 }
 .navbar-style .navbar-brand {
 	font-size: 30px;
+}
+.nav li:hover {
+	/*border-top-color: #4eb7f5;*/
 }
 .nav > li > a:hover, .nav > li > a:focus {
 	color: #ffffff;
@@ -129,7 +132,7 @@ html,body{
 
 /* gallery */
 .gallery {
-	margin: 0 auto 20px;
+	margin: 20px auto;
 	width: 90%;
 }
 .gallery .photo {
@@ -288,6 +291,9 @@ html,body{
 
 
 /* photo-wall */
+.photo-wall {
+	margin: 20px auto 20px;
+}
 .photo-wall .model {
 	margin-bottom: 10px;
     background: #e6e6e6;
