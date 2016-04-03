@@ -1,1 +1,1 @@
-# stylever.github.com
+# stylever.github.io
