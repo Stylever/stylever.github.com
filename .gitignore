@@ -1,0 +1,10 @@
+pages/templates/en/package.json
+**/.DS_Store
+index_old.html
+js/libs/bootstrap.js
+js/libs/jquery.js
+js/libs/require.js
+js/libs/template.js
+pages/templates/build/.cache/*
+js/plugins/jquery.flexslider.js
+js/plugins/jquery.flexslider.min.js 
